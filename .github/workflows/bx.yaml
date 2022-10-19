@@ -15,8 +15,10 @@ jobs:
         run: Get-Location
       - name: Build Library
         run: |
-        "& $IARBUILD_PATH ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS" | powershell
-        shell: powershell
+        curl -s https://codecov.io/bash | bash
+        env:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+            CODECOV_NAME: ${{ runner.os }} Python ${{ matrix.python-version }}
       - name: Build Component A
         run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS | bash
       - name: Build Component B
