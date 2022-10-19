@@ -13,8 +13,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Get Location
         run: Get-Location
-      - name: Build Library
-        run: %IARBUILD_PATH% ./arm/library.ewp -build %BUILD_TYPE%
+      - name: Echo env
+        run: echo %IARBUILD_PATH% ./arm/library.ewp -build %BUILD_TYPE%
         shell: cmd
+      
         
         
