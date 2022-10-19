@@ -16,6 +16,8 @@ jobs:
       - name: Echo env
         run: echo %IARBUILD_PATH% ./arm/library.ewp -build %BUILD_TYPE%
         shell: cmd
-      
+      - name: Build Library
+        run: %IARBUILD_PATH% ./arm/library.ewp -build %BUILD_TYPE% | cmd
+        shell: cmd
         
         
