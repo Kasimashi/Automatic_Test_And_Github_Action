@@ -4,7 +4,7 @@ on:
     branches: [ dev* ]
 env:
   BUILD_TYPE: Debug  
-  IARBUILD_PATH: C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\common\\bin\\iarbuild
+  IARBUILD_PATH: "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\common\\bin\\iarbuild"
   IARBUILD_OPTS: -log all -parallel 2
 jobs:
   iarbuild:
@@ -14,10 +14,10 @@ jobs:
       - name: Get Location
         run: Get-Location
       - name: Build Library
-        run: "& $IARBUILD_PATH ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS"
+        run: $IARBUILD_PATH ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS
       - name: Build Component A
-        run: "& $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS"
+        run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS
       - name: Build Component B
-        run: "& $IARBUILD_PATH ./arm/componentB.ewp -build $BUILD_TYPE $IARBUILD_OPTS"
+        run: $IARBUILD_PATH ./arm/componentB.ewp -build $BUILD_TYPE $IARBUILD_OPTS
         
         
