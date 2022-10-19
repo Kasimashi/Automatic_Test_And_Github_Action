@@ -14,11 +14,10 @@ jobs:
       - name: Get Location
         run: Get-Location
       - name: Build Library
-        shell: cmd
-        run: %IARBUILD_PATH% ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS
+        run: "& $IARBUILD_PATH ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS" | powershell
       - name: Build Component A
-        run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS
+        run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS | bash
       - name: Build Component B
-        run: $IARBUILD_PATH ./arm/componentB.ewp -build $BUILD_TYPE $IARBUILD_OPTS
+        run: $IARBUILD_PATH ./arm/componentB.ewp -build $BUILD_TYPE $IARBUILD_OPTS | bash
         
         
