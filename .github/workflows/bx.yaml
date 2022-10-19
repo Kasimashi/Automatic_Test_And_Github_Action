@@ -1,7 +1,9 @@
 name: IAR Build Tools CI
 on:
   push:
-    branches: [ dev* ]
+    branches:
+        - dev*
+        - main
 env:
   BUILD_TYPE: Debug  
   IARBUILD_PATH: "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\common\\bin"
