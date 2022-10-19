@@ -14,6 +14,7 @@ jobs:
       - name: Get Location
         run: Get-Location
       - name: Build Library
-        run: $IARBUILD_PATH ./arm/library.ewp -build $BUILD_TYPE $IARBUILD_OPTS
+        run: $IARBUILD_PATH library.ewp -build $BUILD_TYPE $IARBUILD_OPTS
+        working-directory: ./arm
         
         
