@@ -4,7 +4,6 @@ on:
     branches: [ dev* ]
 env:
   BUILD_TYPE: Debug  
-  IARBUILD_PATH: C:/Program Files/IAR Systems/Embedded Workbench 9.0/common/bin
   IARBUILD_OPTS: -log all -parallel 2
 jobs:
   iarbuild:
@@ -12,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Library
-        run: 'C:/Program Files/IAR Systems/Embedded Workbench 9.0/common/bin/iarbuild' ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS
+        run: 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\iarbuild ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS'
       - name: Build Component A
-        run: 'C:/Program Files/IAR Systems/Embedded Workbench 9.0/common/bin/iarbuild' ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS
+        run: 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\iarbuild' ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS'
       - name: Build Component B
-        run: 'C:/Program Files/IAR Systems/Embedded Workbench 9.0/common/bin/iarbuild' ./arm/componentB.ewp -build $BUILD_TYPE $IARBUILD_OPTS
+        run: 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\iarbuild ./arm/componentB.ewp -build $BUILD_TYPE $IARBUILD_OPTS'
