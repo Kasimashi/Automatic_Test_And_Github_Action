@@ -14,9 +14,7 @@ jobs:
       - name: Get Location
         run: Get-Location
       - name: Build Library
-        run: |
-        echo " IARBUILD_PATH : $IARBUILD_PATH "
-        Start-Process -FilePath $IARBUILD_PATH -ArgumentList "./arm/library.ewp","-build","$BUILD_TYPE","$IARBUILD_OPTS"
+        run: echo " IARBUILD_PATH : $IARBUILD_PATH "
       - name: Build Component A
         run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS | bash
       - name: Build Component B
