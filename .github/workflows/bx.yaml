@@ -15,7 +15,7 @@ jobs:
         run: Get-Location
       - name: Build Library
         run: |
-        & $IARBUILD_PATH ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS | powershell
+        "& $IARBUILD_PATH ./arm/library.ewp    -build $BUILD_TYPE $IARBUILD_OPTS" | powershell
         shell: powershell
       - name: Build Component A
         run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS | bash
