@@ -13,8 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Get Location
         run: Get-Location
-      - name: Build Library
-        run: "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\common\\bin\\iarbuild.exe" ./arm/library.ewp -build Debug
-        shell: powershell
+      - name: Echo env
+        run: env
         
         
