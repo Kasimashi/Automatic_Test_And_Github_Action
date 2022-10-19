@@ -4,7 +4,7 @@ on:
     branches: [ dev* ]
 env:
   BUILD_TYPE: Debug  
-  IARBUILD_PATH: "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin"
+  IARBUILD_PATH: "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\common\\bin"
   IARBUILD_OPTS: -log all -parallel 2
 jobs:
   iarbuild:
