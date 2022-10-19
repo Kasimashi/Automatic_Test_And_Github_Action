@@ -14,7 +14,7 @@ jobs:
       - name: Get Location
         run: Get-Location
       - name: Build Library
-        run: echo '%IARBUILD_PATH% ./arm/componentA.ewp -build %BUILD_TYPE% %IARBUILD_OPTS%'
+        run: echo '%IARBUILD_PATH% %dp0/arm/componentA.ewp -build %BUILD_TYPE% %IARBUILD_OPTS%'
         shell: cmd
       - name: Build Component A
         run: $IARBUILD_PATH ./arm/componentA.ewp -build $BUILD_TYPE $IARBUILD_OPTS
