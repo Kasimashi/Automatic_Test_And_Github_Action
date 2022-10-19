@@ -17,7 +17,7 @@ jobs:
         run: echo %IARBUILD_PATH% ./arm/library.ewp -build %BUILD_TYPE%
         shell: cmd
       - name: Build Library
-        run: $IARBUILD_PATH ./arm/library.ewp -build $BUILD_TYPE
+        run: "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\common\\bin\\iarbuild.exe" ./arm/library.ewp -build Debug
         shell: powershell
         
         
