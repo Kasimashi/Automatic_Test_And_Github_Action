@@ -1,6 +1,6 @@
 # Test_CI-IARR
 
-[![IAR Build Tools CI](https://github.com/Kasimashi/Test_CI-IAR/actions/workflows/bx.yaml/badge.svg?branch=main)](https://github.com/Kasimashi/Test_CI-IAR/actions/workflows/bx.yaml)
+[![IAR Build Tools CI](https://github.com/Kasimashi/Automatic_Test_And_Github_Action/actions/workflows/IAR_build.yaml/badge.svg)](https://github.com/Kasimashi/Automatic_Test_And_Github_Action/actions/workflows/IAR_build.yaml)
 
 ## Windows Automatic Test 
 
