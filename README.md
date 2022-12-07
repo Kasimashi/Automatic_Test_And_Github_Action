@@ -1,4 +1,4 @@
-# Test_CI-IARR
+# Automatic_Test_And_Github_Action
 
 [![IAR Build Tools CI](https://github.com/Kasimashi/Automatic_Test_And_Github_Action/actions/workflows/IAR_build.yaml/badge.svg)](https://github.com/Kasimashi/Automatic_Test_And_Github_Action/actions/workflows/IAR_build.yaml)
 
