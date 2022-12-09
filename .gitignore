@@ -30,3 +30,7 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+
+CppCheck_html/*
+Doxygen_html/*
+latex/*
