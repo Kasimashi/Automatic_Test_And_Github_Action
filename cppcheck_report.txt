@@ -34,6 +34,15 @@ cppcheck/main.c:5:9: style: Variable 'a[10]' is assigned a value that is never u
 cppcheck/main.c:4:7: style: Unused variable: result [unusedVariable]
   int result;
       ^
+main.c:5:4: error: Array 'a[10]' accessed at index 10, which is out of bounds. [arrayIndexOutOfBounds]
+  a[10] = 0;
+   ^
+main.c:5:9: style: Variable 'a[10]' is assigned a value that is never used. [unreadVariable]
+  a[10] = 0;
+        ^
+main.c:4:7: style: Unused variable: result [unusedVariable]
+  int result;
+      ^
 IAR_compilation/portable/library/unreachableCode.c:51:0: style: The function 'checkRange' is never used. [unusedFunction]
 
 ^
