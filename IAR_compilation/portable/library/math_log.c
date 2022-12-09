@@ -17,6 +17,7 @@ static float p(float x, DATATYPE i)
   int b = 1; // Use for continious integration to test warning from compiler
   int c = 1; // Use for continious integration to test warning from compiler
   int d = 1; // Use for continious integration to test warning from compiler
+  float res = 1.0f;
   for (; i > 0; i--) {
     res *= x;
   }
