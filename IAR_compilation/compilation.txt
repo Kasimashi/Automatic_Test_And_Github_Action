@@ -1,0 +1,8 @@
+
+     IAR Command Line Build Utility V9.0.8.8418
+     Copyright 2021-2021 IAR Systems AB.
+
+
+library - Debug
+Reading project nodes...
+
