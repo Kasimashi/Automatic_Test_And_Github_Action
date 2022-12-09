@@ -43,10 +43,10 @@ jobs:
       - name: Build test
         run: |
           export PATH="/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH"
-          CXXFLAGS="-O1 -g -DHAVE_BOOST" make -j$(nproc) testrunner HAVE_RULES=yes MATCHCOMPILER=yes
+          CXXFLAGS="-O1 -g -DHAVE_BOOST" make -j$(nproc) main HAVE_RULES=yes MATCHCOMPILER=yes
       - name: Run valgrind
         run: |
-          valgrind --error-limit=yes --leak-check=full --num-callers=50 --show-reachable=yes --track-origins=yes --suppressions=valgrind/testrunner.supp --gen-suppressions=all --log-fd=9 --error-exitcode=42 ./testrunner TestGarbage TestOther TestSimplifyTemplate 9>memcheck.log
+          valgrind --error-limit=yes --leak-check=full --num-callers=50 --show-reachable=yes --track-origins=yes --suppressions=valgrind/testrunner.supp --gen-suppressions=all --log-fd=9 --error-exitcode=42 ./main TestGarbage TestOther TestSimplifyTemplate 9>memcheck.log
           cat memcheck.log
           
       - uses: actions/upload-artifact@v3
