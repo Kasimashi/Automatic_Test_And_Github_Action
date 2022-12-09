@@ -1,0 +1,68 @@
+IAR_compilation/portable/library/doInit.c:19:18: error: Uninitialized variable: error_num [uninitvar]
+  memcpy(buffer, error_num, sizeof(buffer));
+                 ^
+IAR_compilation/portable/library/evalOrder.c:10:13: error: Expression 'i+b[++i]' depends on order of evaluation of side effects [unknownEvaluationOrder]
+  int a = i + b[++i];
+            ^
+IAR_compilation/portable/library/memoryLeaks.c:16:13: style: Variable 'pointer' is assigned a value that is never used. [unreadVariable]
+    pointer = (char *)malloc(sizeof(char) * MAXSIZE);
+            ^
+IAR_compilation/portable/library/nullAssign.c:13:11: error: Null pointer dereference: p [nullPointer]
+  return *p;  // dereference after
+          ^
+IAR_compilation/portable/library/nullAssign.c:11:7: note: Assignment 'p=NULL', assigned value is 0
+  p = NULL;   // assignment to NULL
+      ^
+IAR_compilation/portable/library/nullAssign.c:13:11: note: Null pointer dereference
+  return *p;  // dereference after
+          ^
+IAR_compilation/portable/library/unreachableCode.c:63:7: warning: Either the condition 'cur==0' is redundant or there is possible null pointer dereference: cur. [nullPointerRedundantCheck]
+  if (cur[0] == '-') {
+      ^
+IAR_compilation/portable/library/unreachableCode.c:68:11: note: Assuming that condition 'cur==0' is not redundant
+  if (cur == 0) {
+          ^
+IAR_compilation/portable/library/unreachableCode.c:63:7: note: Null pointer dereference
+  if (cur[0] == '-') {
+      ^
+cppcheck/main.c:5:4: error: Array 'a[10]' accessed at index 10, which is out of bounds. [arrayIndexOutOfBounds]
+  a[10] = 0;
+   ^
+cppcheck/main.c:5:9: style: Variable 'a[10]' is assigned a value that is never used. [unreadVariable]
+  a[10] = 0;
+        ^
+cppcheck/main.c:4:7: style: Unused variable: result [unusedVariable]
+  int result;
+      ^
+IAR_compilation/portable/library/unreachableCode.c:51:0: style: The function 'checkRange' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/unreachableCode.c:62:0: style: The function 'checkSequence' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/divisionByZero.c:9:0: style: The function 'div0_test' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/doInit.c:12:0: style: The function 'doInit' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/evalOrder.c:7:0: style: The function 'evalOrder' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/crc32.c:17:0: style: The function 'fastCRC32' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/unreachableCode.c:16:0: style: The function 'guessFigure' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/math_log.c:23:0: style: The function 'math_log' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/nullAssign.c:8:0: style: The function 'null_ptr_derreference' is never used. [unusedFunction]
+
+^
+IAR_compilation/portable/library/memoryLeaks.c:8:0: style: The function 'simpleLeakInCycle' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
