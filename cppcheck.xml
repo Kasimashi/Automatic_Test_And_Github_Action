@@ -22,17 +22,6 @@
             <location file="C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR_compilation\portable\library\nullAssign.c" line="11" column="7" info="Assignment &apos;p=NULL&apos;, assigned value is 0"/>
             <symbol>p</symbol>
         </error>
-        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[10]&apos; accessed at index 10, which is out of bounds." verbose="Array &apos;a[10]&apos; accessed at index 10, which is out of bounds." cwe="788" file0="C:/Users/SESA598592/Desktop/Automatic_Test_And_Github_Action/cppcheck/main.c">
-            <location file="C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\cppcheck\main.c" line="5" column="4" info="Array index out of bounds"/>
-        </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;a[10]&apos; is assigned a value that is never used." verbose="Variable &apos;a[10]&apos; is assigned a value that is never used." cwe="563" file0="C:/Users/SESA598592/Desktop/Automatic_Test_And_Github_Action/cppcheck/main.c">
-            <location file="C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\cppcheck\main.c" line="5" column="9"/>
-            <symbol>a[10]</symbol>
-        </error>
-        <error id="unusedVariable" severity="style" msg="Unused variable: result" verbose="Unused variable: result" cwe="563" file0="C:/Users/SESA598592/Desktop/Automatic_Test_And_Github_Action/cppcheck/main.c">
-            <location file="C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\cppcheck\main.c" line="4" column="7"/>
-            <symbol>result</symbol>
-        </error>
         <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;cur==0&apos; is redundant or there is possible null pointer dereference: cur." verbose="Either the condition &apos;cur==0&apos; is redundant or there is possible null pointer dereference: cur." cwe="476" file0="C:/Users/SESA598592/Desktop/Automatic_Test_And_Github_Action/IAR_compilation/portable/library/unreachableCode.c">
             <location file="C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR_compilation\portable\library\unreachableCode.c" line="63" column="7" info="Null pointer dereference"/>
             <location file="C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR_compilation\portable\library\unreachableCode.c" line="68" column="11" info="Assuming that condition &apos;cur==0&apos; is not redundant"/>

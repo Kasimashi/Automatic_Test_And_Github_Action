@@ -1,0 +1,12 @@
+name: Doxygen
+on:
+  push:
+    branches:
+        - main
+jobs:
+  iarbuild:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Doxygen
+        run: ./run-doxygen.bat
