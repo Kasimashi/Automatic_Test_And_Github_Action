@@ -47,6 +47,7 @@ set CPPCHECK_PARAMS=%CPPCHECK_PARAMS% -j %NUMBER_OF_PROCESSORS%
 set CPPCHECK_PARAMS=%CPPCHECK_PARAMS% --check-config
 set CPPCHECK_PARAMS=%CPPCHECK_PARAMS% --cppcheck-build-dir=b ../src
 
+pushd %~dp0
 set ERROR_RESULT=0
 if exist "%CMD_CPPCHECK%" (
 	@echo Process :
@@ -57,5 +58,6 @@ if exist "%CMD_CPPCHECK%" (
 	
 	python38 cppcheck-htmlreport.py --source-dir=. --title=CPPCheckReport --file=%CPPCHECK_OUT% --report-dir=%OutputFolder%
 )
+popd
 pause
 exit /b %ERROR_RESULT%
