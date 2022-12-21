@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build CppCheck
-        run: ./run-cppcheck.bat
+        run: ./addons/run-cppcheck.bat

@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Library
-        run: ./IAR_compilation/compile.bat
+        run: ./addons/compile_IAR.bat

@@ -1,0 +1,28 @@
+
+     IAR Command Line Build Utility V9.0.8.8418
+     Copyright 2021-2021 IAR Systems AB.
+
+
+library - Debug
+Reading project nodes...
+
+Cleaning... 8 files.
+crc32.c
+unreachableCode.c
+math_mul.c
+nullAssign.c
+math_sum.c
+debug_log.c
+divisionByZero.c
+math_log.c
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(16) : Warning[Pe177]: variable "a" was declared but never referenced
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(17) : Warning[Pe177]: variable "b" was declared but never referenced
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(18) : Warning[Pe177]: variable "c" was declared but never referenced
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(19) : Warning[Pe177]: variable "d" was declared but never referenced
+library.a
+
+Total number of errors: 0
+Total number of warnings: 4
+
+Build succeeded
+

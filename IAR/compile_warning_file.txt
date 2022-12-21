@@ -1,0 +1,4 @@
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(16) : Warning[Pe177]: variable "a" was declared but never referenced
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(17) : Warning[Pe177]: variable "b" was declared but never referenced
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(18) : Warning[Pe177]: variable "c" was declared but never referenced
+C:\Users\SESA598592\Desktop\Automatic_Test_And_Github_Action\IAR\portable\library\math_log.c(19) : Warning[Pe177]: variable "d" was declared but never referenced

@@ -1,0 +1,5 @@
+cppcheck_html/*
+
+doxygen_html/*
+
+*.txt
