@@ -9,12 +9,12 @@
 #include <iostream>
 #include <string>
 
-#include "Student.h"
+#include "dog.hpp"
 
 
-class StudentTestCase : public CppUnit::TestFixture
+class DogTestCase : public CppUnit::TestFixture
 {
-CPPUNIT_TEST_SUITE(StudentTestCase);
+CPPUNIT_TEST_SUITE(DogTestCase);
 CPPUNIT_TEST(testConstructor);
 CPPUNIT_TEST(testAssignAndRetrieveGrades);
 CPPUNIT_TEST_SUITE_END();
@@ -28,8 +28,8 @@ protected:
     // method to test the constructor
     void testConstructor();
 
-    // method to test the assigning and retrieval of grades
-    void testAssignAndRetrieveGrades();
+    // method to test the Energy of the dog
+    void testEnergy();
 
 };
 

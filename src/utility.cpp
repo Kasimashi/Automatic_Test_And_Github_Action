@@ -1,4 +1,4 @@
-#include "utility.hpp"
+#include "Utility.hpp"
 
 int square(int x) {
     return x * x;

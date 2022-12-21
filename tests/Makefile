@@ -5,11 +5,10 @@ LDFLAGS = -L/usr/lib
 LIBS = -lcppunit
 
 OBJS = \
-	Course.o \
-	Student.o \
+	TestDog.o \
 
 TESTOBJS = \
-	TestStudent.o \
+	TestDog.o \
 
 
 all: tester

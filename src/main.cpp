@@ -1,6 +1,6 @@
-#include "main.hpp"
-#include "dog.hpp"
-#include "utility.hpp"
+#include "Main.hpp"
+#include "Dog.hpp"
+#include "Utility.hpp"
 #include <stdio.h>
 
 int main(int argc, char** argv) {

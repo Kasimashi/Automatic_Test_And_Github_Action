@@ -1,4 +1,4 @@
-#include "TestStudent.h"
+#include "Dog.hpp"
 
 #include <cppunit/extensions/TestFactoryRegistry.h>
 #include <cppunit/BriefTestProgressListener.h>
@@ -9,44 +9,42 @@
 
 
 // Register test fixture
-CPPUNIT_TEST_SUITE_REGISTRATION(StudentTestCase);
-
+CPPUNIT_TEST_SUITE_REGISTRATION(DogTestCase);
 
 // method to test the constructor
-void StudentTestCase::testConstructor()
+void DogTestCase::testConstructor()
 {
     // create a student object
-    Student stu("Tan Meng Chee", "94-1111B-13");
+    Dog MyDog("Wuzu");
 
     // check that the object is constructed correctly
-    std::string student_name = stu.getStuName();
-    CPPUNIT_ASSERT(student_name == "Tan Meng Chee");
-    std::string student_number = stu.getStuNumber();
-    CPPUNIT_ASSERT(student_number == "94-1111B-13");
+    std::string dog_name = MyDog.getDogName();
+    CPPUNIT_ASSERT(dog_name == "Wuzu");
 }
 
 
 // method to test the assigning and retrieval of grades
-void StudentTestCase::testAssignAndRetrieveGrades()
+void DogTestCase::testEnergy()
 {
-    // create a student
-    Student stu("Jimmy", "946302B");
+    // create a dog
+    Dog MyDog("Wuzu");
 
-    // assign a few grades to this student
-    stu.assignGrade("cs2102", 60);
-    stu.assignGrade("cs2103", 70);
-    stu.assignGrade("cs3214s", 80);
+    // Check the dog energy at startup
+    CPPUNIT_ASSERT_EQUAL(MAX_ENERGY / 2, MyDog.getEnergy();
 
-    // verify that the assignment is correct
-    CPPUNIT_ASSERT_EQUAL(60, stu.getGrade("cs2102"));
-    CPPUNIT_ASSERT_EQUAL(70, stu.getGrade("cs2103"));
+    // Set it sleep 5 min
+    MyDog.sleep(5);
 
-    // attempt to retrieve a course that does not exist
-    CPPUNIT_ASSERT_EQUAL(-1, stu.getGrade("cs21002"));
+    // Check the dog energy after sleep
+    CPPUNIT_ASSERT_EQUAL(MAX_ENERGY, MyDog.getEnergy();
+
+    // Let my Dog bark two time
+    MyDog.bark();
+    MyDog.bark();
+
+    // Check the dog energy after 2 barks
+    CPPUNIT_ASSERT_EQUAL(MAX_ENERGY - 2, MyDog.getEnergy();
 }
-
-
-
 
 // the main method
 int main(int argc, char *argv[])

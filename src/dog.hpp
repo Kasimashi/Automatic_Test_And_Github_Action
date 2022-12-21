@@ -3,6 +3,8 @@
 
 #define MAX_ENERGY 10
 
+#define ENERGY_EXPEND_BARK 1
+
 /**
  * \brief Represents a dog.
  *

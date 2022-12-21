@@ -1,5 +1,5 @@
-#include "dog.hpp"
-#include "utility.hpp"
+#include "Dog.hpp"
+#include "Utility.hpp"
 #include <stdio.h>
 
 Dog::Dog(const char* _name) : name(_name) {
@@ -7,8 +7,13 @@ Dog::Dog(const char* _name) : name(_name) {
     printf("Created %s the dog.\n", name);
 }
 
+const char* Dog::getDogName()
+{
+    return name;
+}
+
 void Dog::bark(void) {
-    int energyToExpend = 1;
+    int energyToExpend = ENERGY_EXPEND_BARK;
     if (checkEnergy(energyToExpend)) {
         energy -= energyToExpend;
         printf("%s BARKS!\n", name);
@@ -45,6 +50,10 @@ void Dog::sleep(int minutes) {
         energy = MAX_ENERGY;
         printf("%s is fully rested.\n", name);
     }
+}
+
+int Dog::getEnergy( void ) {
+    return energy;
 }
 
 bool Dog::checkEnergy(int energyToExpend) {
