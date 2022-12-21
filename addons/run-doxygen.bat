@@ -1,6 +1,6 @@
 call tools\find-tools.bat
 
-if exist doxygen_out rmdir /s /q doxygen_out
+if exist doxygen_html rmdir /s /q doxygen_html
 
 pushd %~dp0doxygen-awesome-css
 if "%CMD_DOXYGEN%" == "" (
