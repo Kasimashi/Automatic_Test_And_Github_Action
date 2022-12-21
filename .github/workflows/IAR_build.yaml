@@ -5,6 +5,7 @@ on:
         - dev*
         - main
   workflow_dispatch:
+  pull_request:
 jobs:
   iarbuild:
     runs-on: self-hosted
