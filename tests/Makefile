@@ -1,15 +1,18 @@
 CXX = g++
 CXXFLAGS = -Wall
-INCLUDE = 	-I/usr/include \
-			-I../src
-LDFLAGS = -L/usr/lib
+INCLUDE = 	-I./cppunit/include \
+			-I../src \
+			-I./
+LDFLAGS = -L/cppunit/lib
 LIBS = -lcppunit
 
 OBJS = \
 	TestDog.o \
+	TestUtilities.o \
 
 TESTOBJS = \
 	TestDog.o \
+	TestUtilities.o \
 
 
 all: tester
