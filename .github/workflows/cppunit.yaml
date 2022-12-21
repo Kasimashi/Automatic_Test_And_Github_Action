@@ -1,0 +1,21 @@
+name: CPPUnit
+on:
+  push:
+    branches:
+        - main
+  workflow_dispatch:
+    
+jobs:
+  cppunit:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install environnement
+        run: |
+        apt-get update \
+        apt-get install libcppunit-dev \
+        apt-get install build-essential
+      - name: Build CPPUnit (Unit Tests)
+        run: |
+        tests/make all \
+        

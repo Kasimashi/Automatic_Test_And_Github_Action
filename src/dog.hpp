@@ -24,6 +24,12 @@ class Dog {
     Dog(const char* _name);
 
     /**
+     * @brief Get the Name of the Dog.
+     * 
+     * @return 
+    */
+    const char* getDogName();
+    /**
      * \brief Causes the dog to bark.
      *
      * Causes the dog to bark if it has enough energy to do so. Barking
@@ -56,6 +62,12 @@ class Dog {
      * \param minutes Number of minutes for the dog to sleep.
      */
     void sleep(int minutes);
+
+    /**
+     * @brief Get the energy of the dog
+     * 
+    */
+    int getEnergy(void);
 
   protected:
     /**

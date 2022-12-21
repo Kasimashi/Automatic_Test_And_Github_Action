@@ -7,8 +7,7 @@ Dog::Dog(const char* _name) : name(_name) {
     printf("Created %s the dog.\n", name);
 }
 
-const char* Dog::getDogName()
-{
+const char* Dog::getDogName() {
     return name;
 }
 

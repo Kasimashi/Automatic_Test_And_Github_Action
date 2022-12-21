@@ -1,6 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall
-INCLUDE = -I/usr/include
+INCLUDE = 	-I/usr/include \
+			-I../src
 LDFLAGS = -L/usr/lib
 LIBS = -lcppunit
 
