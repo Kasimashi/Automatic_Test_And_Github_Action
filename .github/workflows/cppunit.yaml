@@ -11,11 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install environnement
-        run: |
-        apt-get update \
+        run: apt-get update \
         apt-get install libcppunit-dev \
         apt-get install build-essential
-      - name: Build CPPUnit (Unit Tests)
-        run: |
-        tests/make all \
         
