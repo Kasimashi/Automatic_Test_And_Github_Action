@@ -1,6 +1,6 @@
 # Project Management and CI/CD
 
-This repository is used for demo purpose of CI/CD and project management 
+This repository is used for demo purpose of CI/CD and project management.
 
 ## GitHub Action
 
