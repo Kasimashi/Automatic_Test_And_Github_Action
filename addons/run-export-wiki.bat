@@ -16,5 +16,7 @@ if not exist %wiki_dir% mkdir %wiki_dir%
 
 xcopy /s %output_dir%\worddocs %wiki_dir%
 
+if exist %output_dir% rmdir /s /q %output_dir%
+
 pause
 exit /b 0

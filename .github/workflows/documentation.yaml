@@ -1,0 +1,13 @@
+name: Wiki Documentation
+on:
+  push:
+    branches:
+        - main
+  workflow_dispatch:
+jobs:
+  wikidocx:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Library
+        run: ./addons/compile_IAR.bat
