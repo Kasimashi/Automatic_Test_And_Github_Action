@@ -11,9 +11,14 @@ set COMPILE_PARAMS=%COMPILE_PARAMS% -parallel %NUMBER_OF_PROCESSORS%
 set Warning_Pattern="Warning"
 set Error_Pattern="Error"
 
-set compile_output_file=compile_output_file.txt
-set warning_output_file=compile_warning_file.txt
-set error_output_file=compile_error_file.txt
+set output_dir=%~dp0compilation_html
+set compile_output_file=%output_dir%\compile_output_file.txt
+set warning_output_file=%output_dir%\compile_warning_file.txt
+set error_output_file=%output_dir%\compile_error_file.txt
+
+if exist %output_dir% rmdir /s /q %output_dir%
+
+if not exist %output_dir% mkdir %output_dir%
 
 :: Change execution script from current directory (where this script is)
 pushd %~dp0..\IAR
