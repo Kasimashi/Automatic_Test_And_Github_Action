@@ -16,8 +16,6 @@ set compile_output_file=%output_dir%\compile_output_file.txt
 set warning_output_file=%output_dir%\compile_warning_file.txt
 set error_output_file=%output_dir%\compile_error_file.txt
 
-if exist %output_dir% rmdir /s /q %output_dir%
-
 if not exist %output_dir% mkdir %output_dir%
 
 :: Change execution script from current directory (where this script is)
