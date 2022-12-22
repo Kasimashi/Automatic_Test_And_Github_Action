@@ -33,7 +33,7 @@ float math_log(DATATYPE b, float n)
       n /= b;
     }
     n = p(n, 10);
-    val = 10 * (val + i);
+    val = 10 * (val + i)
     accurate--;
     reps++;
   }
