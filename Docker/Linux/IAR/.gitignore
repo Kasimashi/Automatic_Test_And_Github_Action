@@ -1,0 +1,11 @@
+# Ignored dirs
+projects/*/Debug/
+projects/*/Release/
+projects/*/settings/
+.vscode/
+
+# Ignored files
+projects/*/*.html
+projects/*/Backup*
+projects/*/*.dep
+**/*.deb

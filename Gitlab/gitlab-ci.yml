@@ -1,0 +1,75 @@
+workflow:
+  name: 'Pipeline for branch: $CI_COMMIT_BRANCH'
+  
+  rules:
+    - if: $CI_COMMIT_TITLE =~ /-draft$/
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    
+    #In this example, pipelines run if the commit title (first line of the commit message) does not end with -draft and the pipeline is for either:
+    #A merge request
+    #The default branch.
+
+stages:
+    - test
+    - deploy
+job1:
+  stage: test
+  script: echo "test"
+  timeout: 60 minutes
+  
+  only:
+    - branches
+    - tags
+    - main
+    - /^issue-.*$/
+    - merge_requests
+    
+job2:
+  stage : test
+  script: echo "test"
+  timeout: 60 minutes
+  allow_failure: true ## Continue pipeline if failure happen
+
+
+job3:
+  stage : deploy
+  script: echo "deploy"
+  timeout: 60 minutes
+  artifacts:
+    name: "job1-artifacts-file"
+    paths:
+      - binaries/
+      - .config
+    exclude:
+        - binaries/**/*.o
+    expire_in: 47 yrs 6 mos and 4d
+    public: false
+    when: on_failure # Upload artifacts only when the job fails. Can be always, on_success
+  # When artifacts:public is true (default), the artifacts in public pipelines are available for download by anonymous and guest users.
+  #This example creates an artifact with .config and all the files in the binaries directory.
+  # This example stores all files in binaries/, but not *.o files located in subdirectories of binaries/.
+
+  
+# In this example, job1 and job2 run in parallel:
+# If job1 fails, jobs in the deploy stage do not start.
+# If job2 fails, jobs in the deploy stage can still start.
+
+job4:
+    script:
+        - echo "Run a script that results in exit code 137. This job is allowed to fail."
+        - exit 137
+    allow_failure:
+        exit_codes:
+          - 137
+          - 255
+
+job5:
+    script:
+        - echo "Run a script that results in exit code 137. This job is allowed to fail."
+        - exit 137
+    allow_failure:
+        exit_codes:
+          - 137
+          - 255

@@ -1,0 +1,7 @@
+*.tar
+*.zip
+*.tgz
+an1121_headless_builds/
+SimplicityCommander-Linux/
+SimplicityStudio_v4/
+slc_cli/
